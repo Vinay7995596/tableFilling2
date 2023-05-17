@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <button id="printButton" onclick="downloadPdf()" class="print-button">Print</button>
+    </div>
+
+    <div id="pdfContainer">
+    <div class="total-container-form">
+        <div class="displaying-flex">
+        <div class="container-heading-adderess">
+            <h2 class="comapny-name">Your Company Name</h2>
+            <div class="spand-elemant-container">
+                <div>
+                    <ul>
+                        <li><span class="span-elements-address">Building Name</span></li>
+                        <li><span class="span-elements-address">123 Your Stree</span></li>
+                        <li><span class="span-elements-address">City, State, Country</span></li>
+                        <li><span class="span-elements-address">Zip Code</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><span class="span-elements-address">+1-541-754-3010</span></li>
+                        <li><span class="span-elements-address">you@emial.com</span></li>
+                        <li><span class="span-elements-address">yourwebsite</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="assert/compay-logo.png" alt="company Logo" class="company-logo-adjust">
+        </div>
+        </div>
+    
+        <div class="container-client-address">
+            <div><h4 class="bill-heading">Billed To</h4></div>
+            <div>
+                <ul>
+                    <li><span class="span-elements-address">Client Name</span></li>
+                    <li><span class="span-elements-address">123 Your Stree</span></li>
+                    <li><span class="span-elements-address">City, State, Country</span></li>
+                    <li><span class="span-elements-address">Zip Code</span></li>
+                    <li><span class="span-elements-address">Phone</span></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="invoic-table-align-container">
+            <div class="invoice-details-container">
+                <h4 class="comapny-name">Invoice</h4>
+                <div>
+                    <h4 class="bill-heading extra-bill">INVOICE NUMBER:</h4>
+                    <span class="span-elements-address">00000001</span>
+                </div>
+                <div>
+                    <h4 class="bill-heading extra-bill">DATE OF ISSUE:</h4>
+                    <span class="span-elements-address">DD/MM/YYYY</span>
+                </div>
+            </div>
+            <div>
+                <table id="stored-data-table">
+                    <thead>
+                      <tr class="table-heading-background">
+                        <th>Description</th>
+                        <th>Unit</th>
+                        <th>QTY/HR Rate</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" name="description[]"></td>
+                        <td><input type="number" data-type="currency" name="unit[]"></td>
+                        <td><input type="number" data-type="currency" name="rate[]"></td>
+                        <td><input type="number" data-type="currency" name="amount[]"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+    
+                  <div class="total-container-price-amount">
+                    <div class="border-container">
+                        <div class="price-container">
+                           <span class="bill-heading extra-bill">SUBTOTAL:</span>
+                           <span id="subtotal" class="bill-heading extra-bill"></span>
+                        </div>
+                        <div class="price-container">
+                           <span class="bill-heading extra-bill">DISCOUNT:</span>
+                           <span class="bill-heading extra-bill">00</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="bill-heading extra-bill">TAX RATE:</span>
+                            <span class="bill-heading extra-bill">00</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="bill-heading extra-bill">TAX:</span>
+                            <span class="bill-heading extra-bill">00</span>
+                        </div>
+                    </div>
+    
+                    <div class="total-invoice-heading">
+                        <span class="bill-heading extra-bill">INVOICE TOTAL</span> <br>
+                        <span id="invoceTotalAmount"></span>
+                    </div>
+    
+                    <div class="acoount-details-container">
+                        <ul>
+                            <li><span class="bill-heading extra-bill">BANK ACCOUNT DETAILS</span></li>
+                            <li><span>ACCOUNT HOLDER:</span></li>
+                            <li><span>ACCOUNT NUMBER:</span></li>
+                            <li><span>ABA rtn: 026073150</span></li>
+                            <li><span>Wire rtn: 026073008</span></li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="footer-sectio-main-container">
+            <div class="image-alignment-footer">
+                <span>send money abroad with wise</span>
+                <img src="assert/wise.png" alt="wise Image" class="wise-image">
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- <table id="stored-data-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Unit</th>
+            <th>Rate</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          Table rows will be dynamically added here
+        </tbody>
+      </table> -->
+      <script src="script.js"></script>
+      <script src="secondPage.js"></script>
+</body>
+</html>

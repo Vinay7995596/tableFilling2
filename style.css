@@ -1,0 +1,209 @@
+.table-heading-background {
+    background-color: #606c7c;
+    color: #fff;
+
+}
+
+tr {
+    padding-top: 20px;
+    height: 20px;
+    width: 180px;
+    border: 0px;
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    
+}
+
+td {
+    margin: 30px;
+    height: 20px;
+    width: 180px;
+    border: 0px;
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+
+tr,td,input {
+    background-color: #f1f5f8;
+    height: 30px;
+    width: 180px;
+    border: 0px;
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+input {
+    padding-left: 10px;
+}
+
+.button-save {
+    background-color: #53c757;
+    height: 30px;
+    width: 100px;
+    border-radius: 29px;
+    border: 0px solid;
+}
+
+
+.button-add {
+    background-color: #5a7acf;
+    height: 30px;
+    width: 100px;
+    border-radius: 29px;
+    border: 0px solid;
+}
+
+.button-submit {
+    background-color: #dace2f;
+    height: 30px;
+    width: 100px;
+    border-radius: 29px;
+    border: 0px solid;
+}
+
+.first-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button-element-container {
+    margin-top: 40px;
+}
+
+.displaying-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.company-logo-adjust{
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+
+
+}
+.total-container-form {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.comapny-name {
+    color:#606c7c;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.span-elements-address {
+    color: #000;
+    font-size: 17px;
+    font-family: sans-serif;
+    margin-bottom :20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.container-heading-adderess {
+    max-width: 50%;
+    min-width: 30%;
+}
+
+.spand-elemant-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.bill-heading {
+    color: #606c7c;
+    font-size: 17px;
+}
+
+.container-client-address {
+    margin-top: 50px;
+}
+
+.extra-bill {
+    margin-bottom: 0;
+}
+
+.invoice-details-container {
+    width: 300px;
+}
+
+.invoic-table-align-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: self-start;
+}
+
+.total-container-price-amount {
+    width: 200px;
+    position: relative;
+    left: 70%;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.border-container {
+    border-bottom: 1px solid #606c7c;
+    padding: 10px;
+}
+
+.total-invoice-heading {
+    text-align: right;
+    margin-left: 10px;
+}
+
+.acoount-details-container {
+    margin-top: 30px
+}
+
+
+.footer-sectio-main-container {
+   background-color: #f1f5f8;
+   padding: 50px; 
+   margin-left: 50px;
+   margin-right: 50px;
+}
+
+.wise-image {
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+}
+
+.image-alignment-footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
